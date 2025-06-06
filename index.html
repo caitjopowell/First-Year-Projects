@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Greeting Page</title>
+	
+	<!--Google Fonts--!>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Ribeye+Marrow&display=swap" rel="stylesheet">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=News+Cycle:wght@400;700&family=Ribeye+Marrow&display=swap" rel="stylesheet">
+	
+	<!--JavaScript Confetti--!>
+	
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+	
+	<!--Stylesheet--!>
+	
+	<style>
+		
+		ribeye-marrow-regular {
+			font-family: "Ribeye Marrow", serif;
+			font-weight: 100;
+			font-style: normal;
+			}
+		
+		.news-cycle-regular {
+			font-family: "News Cycle", sans-serif;
+			font-weight: 400;
+			font-style: normal;		
+			}
+		
+		h1 {
+			font-size: 70pt;
+			font-family: "Ribeye Marrow";
+			text-align: center;
+			color: #FC6C85; /* Pink */
+		}
+		
+		.paragraph {
+			font-family: "News Cycle", sans-serif;
+			font-size: 24pt;
+			text-align: center;
+		}
+		
+		.center {
+			text-align: center;
+		}
+		
+		.button {
+			text-align: center;
+			font-family: "News Cycle", sans-serif;
+			font-size: 16pt;
+			font-weight: 700;
+			color: #ffffff; /* White */
+			padding: 20px;
+			background-color: #02afb1; /* Teal */
+		}
+		
+		.button1:hover {
+			background-color: #ffe135;
+		}
+		
+		body {
+			background-color: #f6f6f6;
+		}
+	
+	</style>
+	
+	</head>
+
+	<body>
+
+	<!--Above Fold--!>
+
+		<h1>Welcome to My Page</h1>
+		<div class="paragraph">
+			<p>This is a simple webpage created as a learning exercise.</p>
+			<br></br>
+			<p id="hiddenmessage" style="display:none;"><strong><em>Hello, welcome to the world of coding!</strong></em></p>
+			<br></br>
+		</div>
+			<div class="center">
+				<button id="confetti" button class="button button1" onclick="showParagraph ()" ><strong>Click for a Greeting!</strong></button>	
+			</div>
+	
+	<!--JavaScript--!>
+		<script>
+		
+		function showParagraph() {
+		document.getElementById("hiddenmessage").style.display = "block";
+		}
+		
+		const button = document.getElementById('confetti');
+        button.addEventListener('click', () => {
+          confetti();
+        });
+		
+		</script>
+	</body>
+</html>
